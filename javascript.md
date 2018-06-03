@@ -302,6 +302,8 @@ input要素が関数に対して渡されます。
 関数「onChecked」では、引数の「val」に対して操作を行なっていますが、
 ここでは「選択されたinput要素（チェックボックス）」をvalとしてコードが実行されることになります。
 
+<div style="page-break-before:always"></div>
+
 ### Javascriptのnullとundefined
 
 JavaScriptでは、「値がない」ことを表すための表現が複数あります。
