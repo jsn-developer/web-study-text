@@ -18,7 +18,7 @@ INSERT INTO テーブル名(カラム1, カラム2, ...) VALUES(値1, 値2, ...
 
 |カラム名|型|
 |:-:|:-:|
-|ID|INTEGER | 
+|ID|INTEGER |
 |NAME|VARCHAR(20) |  
 
 このテーブルに挿入するSQL文は以下になります。

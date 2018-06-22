@@ -195,16 +195,15 @@ button.setAttribute("disabled", "disabled");
 このように、動的にHTMLの属性を操作することができるのがJavaScriptの強みです。
 
 まとめ：JavaScriptでの要素操作
-- HTML要素を取得し、属性値などを操作できる
-- 追加・削除する項目はHTMLの書き方に準拠
 
+- HTML要素を取得し、属性値などを操作できる
+
+- 追加・削除する項目はHTMLの書き方に準拠
 
 ## サンプル３　JavaScriptでHTML要素を作成する
 
-
 JavaScriptは、HTML要素の属性操作だけではなく、
 HTML要素自体の作成をすることもできます。
-
 
 ```html
 <!DOCTYPE html>
