@@ -15,7 +15,6 @@ Webページを作成する為に使用する基本的なマークアップ言�
 すると、<html>などから始まる文字列情報が表示されます。
 これがHTMLのソースコードです。
 
-
 JavaScriptフレームワークやJSP(Java)やASP.NET(C#)なども、
 最終的にはこのHTMLコードを作成することでブラウザ上で見れるようになります。
 
@@ -28,7 +27,7 @@ JavaScriptフレームワークやJSP(Java)やASP.NET(C#)なども、
 
 試しに、下記のようなファイル「hello.html」を作成してみましょう。
 
-```html:hello.html 
+```html:hello.html
 Hello, World!
 ```
 
