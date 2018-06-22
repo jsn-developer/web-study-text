@@ -8,14 +8,11 @@ JavaScriptは、主にWebブラウザ上で動作するスクリプト言語で�
 なお、"Java"の名を冠してはいるが、
 サン・マイクロシステム社(現在はOracle社）が開発したJavaとの互換性等はありません。
 
-
-
 # JavaScriptにできること
 
 JavaScriptは、主にブラウザ上で表示されるHTML要素の操作に使用されます。
 
 以下に、サンプルとして幾つかの使用例を紹介します。
-
 
 # サンプルを用いた解説
 
@@ -325,7 +322,7 @@ alertは、引数の文字列をアラートとして表示する構文です。
     <title>Document</title>
 </head>
 <body>
-    <script>
+    <script>
         // 確認するオブジェクト
         var dictionary = {
             value1 : "value",
@@ -349,12 +346,12 @@ alertは、引数の文字列をアラートとして表示する構文です。
 JavaScriptでは、オブジェクトに宣言されていない項目にアクセスしてもエラーとはなりません。
 その代わり、宣言されていない・または初期化されていない項目はnullではなく「undefined」として取得されます。
 <br>
-特に、JavaScriptにて値を取得する際にその項目がnullなのかundefinedかどうか判別するのは非常に難しいです。
+特に、JavaScriptにて値を取得する際にその項目がnullなのかundefinedかどうか判別するのは非常に難しいです。
 
 例えば、「何かしらの値が入っている」という判定文をJava言語などの他言語で表現する場合、
 
 ```Java
-if (value != null && !value.equals("")){ }
+if (value != null && !value.equals("")){ }
 ```
 
 と記載しますが、JavaScriptで同じif文を記載すると「undefined」の場合にtrueとなってしまいます。

@@ -10,7 +10,7 @@
 
 ### label
 
-## 画像を表示する
+## 画像を表示する
 
 <div style="page-break-before:always"></div>
 
