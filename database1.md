@@ -3,9 +3,49 @@
 ## MariaDBを使ってみよう
 
 ### MariaDBとは
+MariaDB(マリアディービー)とはMySQLから派生したオープンソースの関係データベース管理システム（RDBMS)です。
+<br>
+MySQLと互換性があり、Googleにも採用されています。
+<br>
+また、多くのストレージエンジンを採用していることやスレッドプールが標準で利用できることも魅力の1つです。
 
 ### 公式サイトからダウンロード
-
+公式サイト(https://mariadb.org/)からダウンロードできます。
+<br>
+任意のブラウザを起動し、上記URLを入力してください。
+<br>
+今回はMicrosoft Edgeを使用しています。
+<br>
+下記のページが表示されます。
+<br>
+ページ上段のメニューに表示されている「Download」をクリックしてください。
+<img src="./shots/database/db_1.png" width="550px">
+<br>
+下記のページが表示されます。
+<br>
+ページ中央「Download」をクリックしてください。
+<img src="./shots/database/db_2.png" width="550px">
+<br>
+下記のページが表示されます。
+<br>
+ページ中央「Download 10.3.7 Stable Now!」をクリックしてください。
+<img src="./shots/database/db_3.png" width="550px">
+<br>
+下記のページが表示されます。
+<br>
+このページでは「OS/CPU」からインストールしたいOSのMariaDBを選び、
+<br>
+「File Name」をクリックして実行ファイルをダウンロードします。
+<br>
+今回は「Windows x64」、msiのインストーラをダウンロードします。
+<img src="./shots/database/db_4.png" width="550px">
+<br>
+下記のページが表示されます。
+<br>
+ブラウザによってはファイルに対する操作を要求されるので「保存」を選択してください
+<img src="./shots/database/db_5.png" width="550px">
+<br>
+ダウンロードしたファイルを実行し、インストール作業を行ってください。
 ### インストール
 
 ### 接続方法
