@@ -19,18 +19,21 @@ MySQLと互換性があり、Googleにも採用されています。
 下記のページが表示されます。
 <br>
 ページ上段のメニューに表示されている「Download」をクリックしてください。
+
 <img src="./shots/database/db_1.png" width="550px">
-<br>
+
 下記のページが表示されます。
 <br>
 ページ中央「Download」をクリックしてください。
+
 <img src="./shots/database/db_2.png" width="550px">
-<br>
+
 下記のページが表示されます。
 <br>
 ページ中央「Download 10.3.7 Stable Now!」をクリックしてください。
+
 <img src="./shots/database/db_3.png" width="550px">
-<br>
+
 下記のページが表示されます。
 <br>
 このページでは「OS/CPU」からインストールしたいOSのMariaDBを選び、
@@ -38,29 +41,41 @@ MySQLと互換性があり、Googleにも採用されています。
 「File Name」をクリックして実行ファイルをダウンロードします。
 <br>
 今回は「Windows x64」、msiのインストーラをダウンロードします。
+
 <img src="./shots/database/db_4.png" width="550px">
-<br>
+
 下記のページが表示されます。
 <br>
 ブラウザによってはファイルに対する操作を要求されるので「保存」を選択してください
+
 <img src="./shots/database/db_5.png" width="550px">
-<br>
+
 ダウンロードしたファイルを実行し、インストール作業を行ってください。
 ### インストール
 それでは、インストーラを実行し、インストール作業を行います。
-実行すると下記の画面が表示されます。
+実行すると初期画面が表示されます。
 「Next」をクリックしてください。
+
 <img src="./shots/database/db_6.png" width="550px">
-<br>
-下記の画面が表示されます。
+
+利用規約の画面が表示されます。
 <br>
 I accept the terms in the License Agreementにチェックをいれます。
 <br>
 「Next」をクリックしてください。
-<br>
+
 <img src="./shots/database/db_7.png" width="550px">
+
+インストールするモジュール選択の画面が表示されます。
 <br>
-下記の画面が表示されます。
+今回はこのままインストールを続けます。
+<br>
+「Next」をクリックしてください。
+
+<img src="./shots/database/db_8.png" width="550px">
+
+<br>
+設定を行う画面が表示されます。
 <br>
 rootユーザーに任意のパスワードを入力してください。
 <br>
@@ -69,45 +84,42 @@ rootユーザーに任意のパスワードを入力してください。
 また、Use UTF8 as default server's character setにチェックを入れてください。
 <br>
 「Next」をクリックしてください。
-<br>
-<img src="./shots/database/db_8.png" width="550px">
-<br>
-下記の画面が表示されます。
-<br>
-「Next」をクリックしてください。
+
 <img src="./shots/database/db_9.png" width="550px">
+
+利用するサービスの設定画面が表示されます。
 <br>
-下記の画面が表示されます。
-<br>
+今回はこのまま続けます。
 「Next」をクリックしてください。
-<br>
+
 <img src="./shots/database/db_10.png" width="550px">
+
+フィードバックプラグインの有効化の確認画面が表示されます。
 <br>
-下記の画面が表示されます。
+今回はこのままで続けます。
 <br>
 「Next」をクリックしてください。
-<br>
+
 <img src="./shots/database/db_11.png" width="550px">
-<br>
-下記の画面が表示されます。
-<br>
+
+インストール開始の確認画面が表示されます。
 <br>
 「Install」をクリックしてください。
-<br>
+
 <img src="./shots/database/db_12.png" width="550px">
+
+インストール中の画面が表示されます。
 <br>
-下記の画面が表示されます。
-<br>
-インストール状況が確認できます。
-<br>
+インストール状況を確認できます。
+
 <img src="./shots/database/db_13.png" width="550px">
-<br>
+
 インストール完了画面が表示されます。
 <br>
 「Finish」をクリックしてインストーラを終了してください。
-<br>
+
 <img src="./shots/database/db_14.png" width="550px">
-<br>
+
 以上で、インストール作業が完了します。
 
 ### 接続方法
