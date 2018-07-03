@@ -47,6 +47,68 @@ MySQLと互換性があり、Googleにも採用されています。
 <br>
 ダウンロードしたファイルを実行し、インストール作業を行ってください。
 ### インストール
+それでは、インストーラを実行し、インストール作業を行います。
+実行すると下記の画面が表示されます。
+「Next」をクリックしてください。
+<img src="./shots/database/db_6.png" width="550px">
+<br>
+下記の画面が表示されます。
+<br>
+I accept the terms in the License Agreementにチェックをいれます。
+<br>
+「Next」をクリックしてください。
+<br>
+<img src="./shots/database/db_7.png" width="550px">
+<br>
+下記の画面が表示されます。
+<br>
+rootユーザーに任意のパスワードを入力してください。
+<br>
+確認用にもう一度パスワードを入力してください。
+<br>
+また、Use UTF8 as default server's character setにチェックを入れてください。
+<br>
+「Next」をクリックしてください。
+<br>
+<img src="./shots/database/db_8.png" width="550px">
+<br>
+下記の画面が表示されます。
+<br>
+「Next」をクリックしてください。
+<img src="./shots/database/db_9.png" width="550px">
+<br>
+下記の画面が表示されます。
+<br>
+「Next」をクリックしてください。
+<br>
+<img src="./shots/database/db_10.png" width="550px">
+<br>
+下記の画面が表示されます。
+<br>
+「Next」をクリックしてください。
+<br>
+<img src="./shots/database/db_11.png" width="550px">
+<br>
+下記の画面が表示されます。
+<br>
+<br>
+「Install」をクリックしてください。
+<br>
+<img src="./shots/database/db_12.png" width="550px">
+<br>
+下記の画面が表示されます。
+<br>
+インストール状況が確認できます。
+<br>
+<img src="./shots/database/db_13.png" width="550px">
+<br>
+インストール完了画面が表示されます。
+<br>
+「Finish」をクリックしてインストーラを終了してください。
+<br>
+<img src="./shots/database/db_14.png" width="550px">
+<br>
+以上で、インストール作業が完了します。
 
 ### 接続方法
 
