@@ -300,15 +300,87 @@ rootユーザーに任意のパスワードを入力してください。
 
 ### テーブルを操作する
 それでは、作成したテーブルの操作を行いましょう。
+<br>
 この項目では、以下の操作について紹介します。
 <br>
-・データの抽出　　
+操作を行うためには、画面右側のクエリータブをクリックしてください。
 <br>
-・データの挿入　　
+クエリータブにテーブルを作成するクエリーが残っていた場合は削除してください。
+
+<img src="./shots/database/db_38.png" width="550px">
+
+<li>データの挿入  INSERT INTO文</li>
+
+データの挿入にはINSERT INTO文を実行します。
 <br>
-・データの更新
+構文は INSERT INTO テーブル名(テーブルのカラム名)
+<br> 
+VALUES(カラムごとに挿入するデータ)となります。(行番号1)
 <br>
-・データの削除
+また、テーブルのすべてのカラムに値を挿入するときは
+<br>
+テーブル名の後に記述するテーブルのカラム名を省略することができます。(行番号2)
+<br>
+今回は、
+id = 1,book_num  = 2 ,author_name  = 夏目漱石 ,title = 吾輩は猫である, price = 1200
+<br>
+上記の内容のデータを挿入します。
+<br>
+同様にして、
+id = 2,book_num  = 3 ,author_name  = 太宰治 ,title = 走れメロス, price = 1300
+<br>
+さらにデータを挿入します。
+<br>
+クエリーを入力するときはカラム名をシングルコーテーションで囲んでください。
+<br>
+これはすべてのクエリーで共通の条件となります。
+
+<img src="./shots/database/db_39.png" width="550px">
+
+挿入したデータはデータタブをクリックして確認することができます。
+
+<img src="./shots/database/db_40.png" width="550px">
+
+<li>データの抽出  SELECT文</li>
+ データの挿入にはSELECT文を実行します。
+ <br>
+ 構文は　SELECT カラム名 FROM テーブル名となります。
+ <br>
+ また、抽出したいデータに条件を付けるときはテーブル名を記述した後にWhere句をつけて
+ <br>
+ 条件を指定することができます。
+ <br>
+ 今回はidが１であるデータの、titleを抽出しています。
+ <br>
+ SELECT文の実行結果クエリータブの下に表示されます。
+
+ <img src="./shots/database/db_41.png" width="550px">
+
+<li>データの更新  UPDATE文</li>
+データの更新にはUPDATE文を実行します。
+<br>
+構文は UPDATE テーブル名　SET カラム名 = 更新後の値 WHERE 条件
+
+<img src="./shots/database/db_42.png" width="550px">
+
+今回はidが１であるデータの、priceを1300に更新しています。
+<br>
+実行結果はデータタブから確認できます。
+
+<img src="./shots/database/db_43.png" width="550px">
+
+<li>データの削除  DELETE文</li>
+データの削除にはDELETE文を実行します。
+<br>
+構文は DELETE FROM テーブル名 WHERE 条件 となります。
+<br>
+今回はidが２であるレコードを削除しています。
+
+<img src="./shots/database/db_45.png" width="550px">
+
+データが削除されているか、データタブを表示して確認してください。
+
+<img src="./shots/database/db_46.png" width="550px">
 ### テーブル一覧
 
 ### 構造の確認
