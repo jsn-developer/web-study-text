@@ -36,7 +36,7 @@ Hello, World!
 <br>
 ダブルクリックで起動しない場合、ファイルをブラウザにドラッグしてみましょう。
 
-![ショット1-1](./shots/shot_1_1.png)
+![ショット1-1](./shots/html/shot_1_1.png)
 
 さて、ここまでできたらHTMLの基礎ができました。
 
@@ -53,7 +53,7 @@ Hello, World!
 Hello, <b>BOLD</b> World!
 ```
 
-![ショット1-1](./shots/shot_1_2.png)
+![ショット1-1](./shots/html/shot_1_2.png)
 
 「BOLD」の文字だけが太く表示されましたでしょうか？
 <br>この「\<b\>」が「太くする」マークアップ記号となります。
@@ -76,7 +76,7 @@ Hello, <b>BOLD</b> World!
 表示された「Link to Google」をクリックすると、Googleへ遷移します。
 今回は外部のサイトを指定しましたが、内部サイトへのリンクも同じ使い方ができます。
 
-![ショット1-1](./shots/shot_1_3.png)
+![ショット1-1](./shots/html/shot_1_3.png)
 
 ## HTMLに必要な共通情報
 
@@ -104,7 +104,7 @@ Hello, <b>BOLD</b> World!
 
 さて、一見一番初めに書いたHello, Worldと全く同じ内容が表示されていますね。
 
-![ショット1-1](./shots/shot_1_4.png)
+![ショット1-1](./shots/html/shot_1_4.png)
 
 
 これだけ見ると、あまり意味がないのでは？と思ってしまうかもしれませんが、
