@@ -165,10 +165,10 @@ UTF-8を採用することが多くなりました。
 以下は書き方の一例です。
 
 ```html:nest.html
-<tag1>
-    <tag2>
-        <tag4>Content<tag4>
-        <tag5>Value</tag5>
-    </tag2>
-</tag1>
+<body>
+    <div>
+        <p>Content<p>
+        <span>Value</span>
+    </div>
+</body>
 ```
