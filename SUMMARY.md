@@ -4,7 +4,7 @@
 
 HTML基礎
 
-* [HTML基礎](html1.md)
+* [HTMLの基本を学ぶ](html1.md)
 * [基本的なマークアップを覚えよう](html2.md)
 
 CSS基礎
