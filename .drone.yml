@@ -1,0 +1,14 @@
+kind: pipeline
+name: default
+
+steps:
+  - name: install
+    image: node
+    commands:
+    - npm install -g gitbook-cli
+    - gitbook help
+    - gitbook install
+    - gitbook build
+    when:
+      branch:
+      - master
