@@ -8,7 +8,7 @@ JavaScriptは、主にWebブラウザ上で動作するスクリプト言語で�
 なお、"Java"の名を冠してはいるが、
 サン・マイクロシステム社(現在はOracle社）が開発したJavaとの互換性等はありません。
 
-# JavaScriptにできること
+## JavaScriptにできること
 
 JavaScriptは、主にブラウザ上で表示されるHTML要素の操作に使用されます。
 
@@ -298,8 +298,9 @@ input要素が関数に対して渡されます。
 関数「onChecked」では、引数の「val」に対して操作を行なっていますが、
 ここでは「選択されたinput要素（チェックボックス）」をvalとしてコードが実行されることになります。
 
+<!--
 <div style="page-break-before:always"></div>
-
+-->
 ### Javascriptのnullとundefined
 
 JavaScriptでは、「値がない」ことを表すための表現が複数あります。
