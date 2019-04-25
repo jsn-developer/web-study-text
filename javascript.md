@@ -86,10 +86,8 @@ HTML内にJavaScriptを宣言する場合、
 
 ```
 
-document.getElementById("textval")で、IDが"textval"を持つHTML要素を取得します。
-<br>
-このtextarea要素は「elem」という名前の「オブジェクト」としてロードされます。
-<br>
+document.getElementById("textval")で、IDが"textval"を持つHTML要素を取得します。  
+このtextarea要素は「elem」という名前の「オブジェクト」としてロードされます。  
 以降は、このelemのプロパティや関数にアクセスすることができます。
 
 
@@ -310,8 +308,7 @@ JavaScriptでは、「値がない」ことを表すための表現が複数あ�
 
 それに対し、「undefined」は「宣言されていません」ということを表します。
 
-例えば、以下のコードがあったとします。
-<br>
+例えば、以下のコードがあったとします。  
 alertは、引数の文字列をアラートとして表示する構文です。
 
 ```html
@@ -344,8 +341,7 @@ alertは、引数の文字列をアラートとして表示する構文です。
 ![values](./shots/javascript/shot_j1_5.png)
 
 JavaScriptでは、オブジェクトに宣言されていない項目にアクセスしてもエラーとはなりません。
-その代わり、宣言されていない・または初期化されていない項目はnullではなく「undefined」として取得されます。
-<br>
+その代わり、宣言されていない・または初期化されていない項目はnullではなく「undefined」として取得されます。  
 特に、JavaScriptにて値を取得する際にその項目がnullなのかundefinedかどうか判別するのは非常に難しいです。
 
 例えば、「何かしらの値が入っている」という判定文をJava言語などの他言語で表現する場合、
@@ -356,8 +352,7 @@ if (value != null && !value.equals("")){ }
 
 と記載しますが、JavaScriptで同じif文を記載すると「undefined」の場合にtrueとなってしまいます。
 
-JavaScriptでは「値がない」(nullかundefinedか空文字)ということをもっと簡単に記載することができます。
-<br>
+JavaScriptでは「値がない」(nullかundefinedか空文字)ということをもっと簡単に記載することができます。  
 以下の記載とするだけで、JavaScriptでは「値がない」と判断します。
 
 ```javascript
