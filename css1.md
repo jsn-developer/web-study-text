@@ -1,3 +1,6 @@
+\newpage
+\part{CSS基礎}
+
 # CSSの基本を学ぶ
 
 CSSとは、"Cascading Style Sheets"(カスケードスタイルシート)の略で、
@@ -20,7 +23,7 @@ HTMLと組み合わせることでページの見た目を装飾することが�
 </div>
 ```
 
-![ボックス](./shots/css/shot_c1_1.png)
+![](./shots/css/shot_c1_1.png)
 
 ## ボックス要素とインライン要素
 
@@ -60,7 +63,8 @@ HTMLには様々なマークアップタグがありますが、
 HTMLのタグ要素に直接指定します。
 一箇所のみ指定したい場合など、手軽に指定することができます。
 
-```html:style
+```html:style.html
+
 　　〜
 
 <div style="color:red;">
@@ -68,6 +72,7 @@ HTMLのタグ要素に直接指定します。
 </div>
 
 　　〜
+
 ```
 
 ### HTMLファイル内にstyleタグとして宣言する
@@ -159,7 +164,7 @@ div {
 
 実際に上記コードを実行すると、以下のようになります。
 
-![赤と青](./shots/css/shot_c1_2.png)
+![](./shots/css/shot_c1_2.png)
 
 正常に赤と青が表示されましたでしょうか？
 
@@ -189,3 +194,4 @@ div {
 ```
 
 上から、Chrome/Safari、IE、CSS3の記述となります。
+

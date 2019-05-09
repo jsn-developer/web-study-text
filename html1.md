@@ -1,3 +1,6 @@
+\newpage
+\part{HTML基礎}
+
 # HTMLの基本を学ぶ
 
 ## HTMLの基礎知識
@@ -35,7 +38,7 @@ Hello, World!
 下記のような画面が表示されましたか？  
 ダブルクリックで起動しない場合、ファイルをブラウザにドラッグしてみましょう。
 
-![ショット1-1](./shots/html/shot_1_1.png)
+![](./shots/html/shot_1_1.png)
 
 さて、ここまでできたらHTMLの基礎ができました。
 
@@ -52,7 +55,7 @@ Hello, World!
 Hello, <b>BOLD</b> World!
 ```
 
-![ショット1-1](./shots/html/shot_1_2.png)
+![](./shots/html/shot_1_2.png)
 
 「BOLD」の文字だけが太く表示されましたでしょうか？
 この「\<b \>」が「太くする」マークアップ記号となります。
@@ -86,7 +89,7 @@ Hello, <b>BOLD</b> World!
 表示された「Link to Google」をクリックすると、Googleへ遷移します。
 今回は外部のサイトを指定しましたが、内部サイトへのリンクも同じ使い方ができます。
 
-![ショット1-1](./shots/html/shot_1_3.png)
+![](./shots/html/shot_1_3.png)
 
 ## 属性
 
@@ -201,3 +204,4 @@ UTF-8を採用することが多くなりました。
     </div>
 </body>
 ```
+

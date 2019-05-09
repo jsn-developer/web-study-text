@@ -1,3 +1,5 @@
+\newpage
+\part{JavaScript基礎}
 
 # JavaScript基礎学習
 
@@ -497,4 +499,5 @@ $(function() {
 ### まとめ：jQueryとは
 - HTML要素の操作が簡単に実現できる
 - 2019年現在でも多くのWebサイト、Webアプリで使われている
+
 

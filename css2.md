@@ -2,16 +2,20 @@
 
 ## 基本となるスタイル
 
+スタイルの基本スタイルは以下の通りです。
+
 ```css
 セレクタ {
     設定名: 値;
 }
-
 ```
 
-### セレクタの種類
+## セレクタ
 
-#### 要素名セレクタ
+セレクタは、スタイルを適用するための条件式を記載します。
+セレクタに記載した条件に合致したHTML要素に対して、スタイルが適用されます。
+
+### 要素名セレクタ
 
 pタグやaタグなど、タグの要素名から指定することができます。
 
@@ -26,7 +30,7 @@ a {
 
 こうすることで、全てのa要素に対して上記のスタイルが適用されます。
 
-#### クラス名を指定しての指定
+### クラス名を指定しての指定
 
 特定の要素にのみ指定を行いたい場合、クラス名を指定してスタイルを記載します。
 
@@ -53,9 +57,7 @@ a {
 例えば非インライン要素に対するvertical-alignなど、
 要素によっては適用されない場合があります。
 
-#### 複数の要素からセレクタを構成する
-
-##### 複数の条件から指定
+### 複数の要素からセレクタを構成する
 
 セレクタを指定する際に、複数の条件を使用してセレクタとすることができます。
 
@@ -89,11 +91,13 @@ divタグは文字が太くなり、aタグは文字が大きくなります。
 このように、同じクラス名を使用する場合でも、
 要素ごとに違った挙動をさせることができます。
 
-### 色を変更しよう
+\newpage
+
+## 色を変更しよう
 
 ここでは、色の変更を行います。
 
-#### 色名指定
+### 色名指定
 
 CSSでは色名指定で表示できる色が用意されており、色の名称を指定することでその色を表示することができます。
 
@@ -101,32 +105,32 @@ CSSでは色名指定で表示できる色が用意されており、色の名�
 
 | |色名|RGB値|
 |:--|--|--|
-| <span style="color:#00FFFF;">■</span> |aqua|#00FFFF|
-| <span style="color:#000000;">■</span> |black|#000000|
-| <span style="color:#0000FF;">■</span> |blue|#0000FF|
-| <span style="color:#FF00FF;">■</span> |fuchsia|#FF00FF|
-| <span style="color:#808080;">■</span> |gray|#808080|
-| <span style="color:#008000;">■</span> |green|#008000|
-| <span style="color:#00FF00;">■</span> |lime|#00FF00|
-| <span style="color:#800000;">■</span> |maroon|#800000|
-| <span style="color:#000080;">■</span> |navy|#000080|
-| <span style="color:#808000;">■</span> |olive|#808000|
-| <span style="color:#800080;">■</span> |purple|#800080|
-| <span style="color:#FF0000;">■</span> |red|#FF0000|
-| <span style="color:#C0C0C0;">■</span> |silver|#C0C0C0|
-| <span style="color:#008080;">■</span> |teal|#008080|
-| <span style="color:#FFFFFF;">■</span> |white|#FFFFFF|
-| <span style="color:#FFFF00;">■</span> |yellow|#FFFF00|
+| \color[HTML]{00FFFF} ■ |aqua|#00FFFF|
+| \color[HTML]{000000} ■ |black|#000000|
+| \color[HTML]{0000FF} ■ |blue|#0000FF|
+| \color[HTML]{FF00FF} ■ |fuchsia|#FF00FF|
+| \color[HTML]{808080} ■ |gray|#808080|
+| \color[HTML]{008000} ■ |green|#008000|
+| \color[HTML]{00FF00} ■ |lime|#00FF00|
+| \color[HTML]{800000} ■ |maroon|#800000|
+| \color[HTML]{000080} ■ |navy|#000080|
+| \color[HTML]{808000} ■ |olive|#808000|
+| \color[HTML]{800080} ■ |purple|#800080|
+| \color[HTML]{FF0000} ■ |red|#FF0000|
+| \color[HTML]{C0C0C0} ■ |silver|#C0C0C0|
+| \color[HTML]{008080} ■ |teal|#008080|
+| \color[HTML]{FFFFFF} ■ |white|#FFFFFF|
+| \color[HTML]{FFFF00} ■ |yellow|#FFFF00|
 
 他にも、「拡張された色名」が124色存在しますが、ここでは説明を省略します。
 
-#### 16進数による指定
+### 16進数による指定
 
 16進数を用いて、RGBの各値を0~FF(255)の範囲で表現することで色の指定を行うことができます。
 
 
 
-#### rgb()による指定
+### rgb()による指定
 
 RGB値を10進数で指定したい場合には、rgb()関数を使用します。
 
@@ -136,7 +140,7 @@ selector {
 }
 ```
 
-### フォントを指定する
+## フォントを指定する
 
 表示する文字に関する指定を行います。
 
@@ -151,11 +155,81 @@ selector {
 
 ## 上下左右に寄せる
 
+テキストを上下左右に寄せることができます。
+
 ### 左右に寄せる - text-align
+
+テキストの左右位置を調整するには、text-alignを使用します。
+
+よく使用される値は以下の通りです。
+
+|値| 説明|
+|--|--|
+|left | 左端に揃える |
+| right | 右端に揃える | 
+| center | 中央に配置 | 
 
 ### 上下に寄せる - vertical-align
 
+テキストの上下一を調整するには、vertical-alignを使用します。  
+ただし、vertical-alignを適用できるのは、インライン要素とテーブルセルのみで、ブロックレベル要素には適用できませんので注意が必要です。
+
+よく使用される値は以下の通りです。
+
+|値| 説明|
+|--|--|
+| top | 上端に揃える |
+| middle | 下端に揃える | 
+| bottom | 中央に配置 | 
+
 ## 枠をつける - border
+
+要素に枠を付けるには、borderを使用します。
+
+### borderの基本形
+
+borderの基本系は以下の通りです。
+
+```css:border.css
+.border {
+    border: solid 1px black;
+}
+```
+
+3つの値を指定することができ、それぞれ
+
+1. ボーダースタイル
+1. 太さ
+1. 色
+
+を指定できます。
+
+スタイルの一例は以下の通りです。
+
+| 値 | 説明 |
+|--|--|
+| none | 線なし |
+| solid | 1本線 |
+| double | 2本線 |
+| dashed | 破線 |
+| dotted | 点線 |
+
+### 個別の指定
+
+borderは上下左右それぞれで指定することもできます。
+
+```css:border.css
+.border {
+    border-top: solid 1px black;
+    border-left: double 2px red;
+    border-right: dashed 1px blue;
+    border-bottom: dotted 1px green;
+}
+```
+
+表示すると以下のようになります。
+
+![](./shots/css/css-2-7.png)
 
 ## 余白
 
@@ -169,7 +243,7 @@ paddingは、「要素の内部」に対する余白となります。
 
 図にすると以下のようになります。
 
-<img src="./shots/css/css2-6.png" style="width:300px">
+![](./shots/css/css2-6.png){width=300px}
 
 例として、以下のようなcssを考えます。
 
@@ -202,7 +276,7 @@ span {
 
 この場合、以下のように表示されます。
 
-<img src="./shots/css/css-2-1.png" >
+![](./shots/css/css-2-1.png)
 
 p要素(灰色の背景部分)に対して設定したmarginおよびpaddingが反映されることで、
 div要素(青い背景)、およびspan要素(赤い背景)の部分に対しての空白部分が生成されます。
@@ -235,7 +309,7 @@ p{
 
 その際、以下のように表示されます。
 
-<img src="./shots/css/css-2-2.png" >
+![](./shots/css/css-2-2.png)
 
 この時、二つの要素の間には20pxの間隔が指定されています。
 スタイルだけを見ると、left要素に10px、right要素に20pxをmarginを指定しているため、
@@ -306,7 +380,7 @@ p {
 
 実行すると、以下のようになります。
 
-<img src="./shots/css/css-2-3.png">
+![](./shots/css/css-2-3.png)
 
 特徴をまとめると、以下のようになります。
 
@@ -350,7 +424,7 @@ p {
 
 実行すると、以下のように表示されます。
 
-<img src="./shots/css/css-2-4.png">
+![](./shots/css/css-2-4.png)
 
 このように、floatを使用することで綺麗な横並びを実現できます。
 なお、float:right;を指定することで、右を基準とした並びをすることもできます。
@@ -385,9 +459,10 @@ p:last-child {
 
 実行すると以下のように表示されます。
 
-<img src="./shots/css/css-2-5.png">
+![](./shots/css/css-2-5.png)
 
 cssにて「p:last-child」に対してclear:leftを指定していますが、
 この「last-child」は、「pの中の最後の要素」を表しています。
 
 つまり、「最後のp要素のみfloatを解除する」ことになります。
+

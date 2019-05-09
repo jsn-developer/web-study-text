@@ -21,7 +21,7 @@
 ```
 
 表示すると、以下のようになります。  
-<img src="./shots/html/html-2-1.png" style="height:500px">
+![](./shots/html/html-2-1.png){width=300px}
 
 #### 段落(p)
 
@@ -37,7 +37,7 @@ Webページの表示内容を記載するために記載するマークアッ�
 
 これをブラウザ上で表示すると以下のようになります。
 
-<img src="./shots/html/html-2-2.png" style="width:400px;">
+![](./shots/html/html-2-2.png){width=400px}
 
 このように、改行と共に空白を開けて文章が表示されます。
 
@@ -152,7 +152,7 @@ labelは、フォーム要素に対する項目名を紐づけるために使用
 
 実行すると以下のようになり、「ラベル」の部分を謳歌してもその横にあるラジオボタンを選択できるようになります。
 
-<img src="./shots/html/html-2-3.png" style="height:40px;">
+![](./shots/html/html-2-3.png){width=40px}
 
 この際、ラジオボタンのid属性名とラベルのfor属性の名前を一致させる事で、紐付けを行う事ができます。
 
@@ -195,32 +195,7 @@ id属性はその要素を一意に決めるために使用します。特別な
 
 表示すると以下のようになります。
 
-<table>
-    <thead>
-        <tr>
-            <th>ヘッダ１</th>
-            <th>ヘッダ２</th>
-            <th>ヘッダ３</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>項目１−１</td>
-            <td>項目１−２</td>
-            <td>項目１−３</td>
-        </tr>
-        <tr>
-            <td>項目２−１</td>
-            <td>項目２−２</td>
-            <td>項目２−３</td>
-        </tr>
-        <tr>
-            <td>項目３−１</td>
-            <td>項目３−２</td>
-            <td>項目３−３</td>
-        </tr>
-    </tbody>
-</table>
+![](./shots/html/html-2-4.png)
 
 各要素は、それぞれ以下の意味を持ちます
 
@@ -261,19 +236,7 @@ HTMLでは、リストを表示するための方法がいくつかあります�
 表示すると、以下のようになります。
 ulタグを入れ子にすることで、インデントと共に子要素を構成する事もできます。
 
-<ul>
-  <li>Item1</li>
-  <li>Item2</li>
-  <li>Item3</li>
-  <li>Item4</li>
-  <li>Item5
-    <ul>
-      <li>Item5-1</li>
-      <li>Item5-2</li>
-      <li>Item5-3</li>
-    </ul>
-  </li>
-</ul>
+![](./shots/html/html-2-5.png)
 
 ### 番号を持ったリストの表示
 
@@ -299,19 +262,7 @@ ulタグを入れ子にすることで、インデントと共に子要素を構
 表示すると、以下のようになります。
 ul要素と違い、olごとに順番が振られるため注意が必要です。
 
-<ol>
-  <li>Item1</li>
-  <li>Item2</li>
-  <li>Item3</li>
-  <li>Item4</li>
-  <li>Item5
-    <ol>
-      <li>Item5-1</li>
-      <li>Item5-2</li>
-      <li>Item5-3</li>
-    </ol>
-  </li>
-</ol>
+![](./shots/html/html-2-6.png)
 
 ### 定義リストの表示
 
@@ -336,14 +287,4 @@ ulやolと利用方法が異なるため注意が必要です。
 
 表示すると以下のようになります。
 
-<dl>
-    <dt>果物</dt>
-    <dd>りんご</dd>
-    <dd>みかん</dd>
-    <dd>いちご</dd>
-    <dt>
-    <dt>野菜</dt>
-    <dd>ナス</dd>
-    <dd>かぼちゃ</dd>
-    <dd>スイカ</dd>
-</dl>
+![](./shots/html/html-2-7.png)
