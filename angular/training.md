@@ -168,7 +168,7 @@ initialize datababse.
 以下のようなメッセージが表示されればサーバの準備は完了です。
 
 
-![起動確認メッセージ](https://solxyz.app/md/uploads/upload_9fea14cd711daddc51f937da96450012.png)
+![](https://solxyz.app/md/uploads/upload_9fea14cd711daddc51f937da96450012.png)
 
 
 ### クライアント開発の準備
@@ -212,7 +212,7 @@ $ ng serve
 
 最後に、ブラウザを起動し、 http://localhost:4200　へアクセスします。
 
-![ログイン画面](https://solxyz.app/md/uploads/upload_157d5cf6353e2869bc236dcf0118fa0c.png)
+![](https://solxyz.app/md/uploads/upload_157d5cf6353e2869bc236dcf0118fa0c.png)
 
 以下の情報を入力し、ログインに成功すれば準備は完了です。
 

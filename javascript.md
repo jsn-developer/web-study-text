@@ -29,7 +29,8 @@ JavaScriptは、主にブラウザ上で表示されるHTML要素の操作に使
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sample1 </title>
 </head>
@@ -128,7 +129,8 @@ onclickを使用することで、ボタン要素がクリックされた際の�
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sample2 </title>
 </head>
@@ -156,8 +158,11 @@ onclickを使用することで、ボタン要素がクリックされた際の�
 
     </script>
     <form>
-        <input id="textval" type="text" value="" onkeyup="checkInput(this)" />
-        <input id="submitButton" type="button" value="送信" onclick="onSubmit()" disabled="disabled" />
+        <input id="textval" type="text" 
+               value="" onkeyup="checkInput(this)" />
+        <input id="submitButton" type="button" 
+               value="送信" onclick="onSubmit()"
+               disabled="disabled" />
     </form>
 </body>
 </html>
@@ -210,7 +215,8 @@ HTML要素自体の作成をすることもできます。
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sample3 </title>
 </head>
@@ -246,8 +252,10 @@ HTML要素自体の作成をすることもできます。
         for (i = 1; i <= 5; i++) {
             // "innerHTML"に代入することで、チェックボックスを追加
             container.innerHTML += 
-                  "<input id='check_"+ i +"' type='checkbox' onchange='onChecked(this)'/>"
-                + "<label for='check_"+i+"'>チェックボックス"+i+"</label>"
+                  "<input id='check_"+ i 
+                +"' type='checkbox' onchange='onChecked(this)'/>"
+                + "<label for='check_" + i + "'>チェックボックス"
+                + i + "</label>"
                 + "<br/>";
         }
     }
@@ -276,8 +284,10 @@ HTML要素を追加している箇所は以下になります。
 
 ```javascript
 container.innerHTML += 
-                  "<input id='check_"+ i +"' type='checkbox' onchange='onChecked(this)'/>"
-                + "<label for='check_"+i+"'>チェックボックス"+i+"</label>"
+                  "<input id='check_"+ i 
+                +"' type='checkbox' onchange='onChecked(this)'/>"
+                + "<label for='check_" + i + "'>チェックボックス"
+                + i + "</label>"
                 + "<br/>";
 
 ```
@@ -340,7 +350,7 @@ alertは、引数の文字列をアラートとして表示する構文です。
 
 実行すると、以下のようなアラートが表示されましたでしょうか。
 
-![values](./shots/javascript/shot_j1_5.png)
+![](./shots/javascript/shot_j1_5.png)
 
 JavaScriptでは、オブジェクトに宣言されていない項目にアクセスしてもエラーとはなりません。
 その代わり、宣言されていない・または初期化されていない項目はnullではなく「undefined」として取得されます。  
@@ -393,7 +403,8 @@ jQueryはその使いやすさから、多くのWebデベロッパーに好ま�
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- jQueryのロード -->
