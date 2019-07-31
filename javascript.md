@@ -220,7 +220,7 @@ HTML要素自体の作成をすることもできます。
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sample3 </title>
 </head>
-
+<body>
 <label><span id="nums">0</span>件が選択されています。</label>
 <hr/>
 <div id="container">
@@ -261,6 +261,7 @@ HTML要素自体の作成をすることもできます。
     }
 
 </script>
+</body>
 </html>
 ```
 
