@@ -80,7 +80,7 @@ a.red {
 <body>
     <div class="red">Red</div>
     <br/>
-    <a class="green">Green</a>
+    <a class="red">Red</a>
 </body>
 </html>
 ```
