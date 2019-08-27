@@ -1,24 +1,7 @@
-\newpage
-\part{JavaScript基礎}
-
-# JavaScript基礎学習
-
-## JavaScriptとは
-
-JavaScriptは、主にWebブラウザ上で動作するスクリプト言語です。
-
-なお、"Java"の名を冠してはいますが、
-サン・マイクロシステム社(現在はOracle社）が開発したJavaとの互換性等はありません。
-
-## JavaScriptにできること
-
-JavaScriptは、主にブラウザ上で表示されるHTML要素の操作に使用されます。
-
-以下に、サンプルとして幾つかの使用例を紹介します。
 
 # サンプルを用いた解説
 
-## サンプル１　テキストボックスの中身を変更する
+## サンプル１　関数を定義し、テキストボックスの中身を変更する
 
 ボタンを押下した際にテキストの文字を操作するサンプルです。
 まずは全体のHTMLコードを見てみましょう。
@@ -60,21 +43,6 @@ JavaScriptは、主にブラウザ上で表示されるHTML要素の操作に使
 ### 関数の定義
 
 まずは、文字列を操作するための”関数”を定義します。
-
-
-HTML内にJavaScriptを宣言する場合、
-"<script>〜</script>"内で囲んで記載したコードがJavaScriptとして認識されます。
-
-
-```javascript
-<script>
-  〜ここに処理を書く〜
-</script>
-
-```
-
-
-実際の関数を宣言してみましょう。
 
 ``` javascript
 
@@ -250,13 +218,35 @@ HTML要素自体の作成をすることもできます。
 
         // 5件のチェックボックスを作成
         for (i = 1; i <= 5; i++) {
+            
+            // JavaScriptのコードを使用して要素(DOM)を生成
+            var newInput = document.createElement("input");
+            newInput.setAttribute("type", "checkbox");
+            newInput.id = "check_" + i; 
+
+            newInput.onclick = onChecked.bind(null, newInput);
+
+            var newLabel = document.createElement("label");
+            newLabel.setAttribute("for", "check_" +i);
+
+            var labelText = document.createTextNode("チェックボックス" + i);
+            newLabel.appendChild(labelText);
+
+            container.appendChild(newInput);
+            container.appendChild(newLabel);
+            container.appendChild(document.createElement("br"));
+
+            // -------------------------------
+            // 以下のコードでも作成可能
+            // -------------------------------
+
             // "innerHTML"に代入することで、チェックボックスを追加
-            container.innerHTML += 
-                  "<input id='check_"+ i 
-                +"' type='checkbox' onchange='onChecked(this)'/>"
-                + "<label for='check_" + i + "'>チェックボックス"
-                + i + "</label>"
-                + "<br/>";
+            // container.innerHTML += 
+            //       "<input id='check_"+ i 
+            //     +"' type='checkbox' onchange='onChecked(this)'/>"
+            //     + "<label for='check_" + i + "'>チェックボックス"
+            //     + i + "</label>"
+            //     + "<br/>";
         }
     }
 
@@ -284,6 +274,79 @@ window.onload = function(){
 HTML要素を追加している箇所は以下になります。
 
 ```javascript
+// JavaScriptのコードを使用して要素(DOM)を生成
+var newInput = document.createElement("input");
+newInput.setAttribute("type", "checkbox");
+newInput.id = "check_" + i; 
+
+newInput.onclick = onChecked.bind(null, newInput);
+
+var newLabel = document.createElement("label");
+newLabel.setAttribute("for", "check_" +i);
+
+var labelText = document.createTextNode("チェックボックス" + i);
+newLabel.appendChild(labelText);
+
+container.appendChild(newInput);
+container.appendChild(newLabel);
+container.appendChild(document.createElement("br"));
+```
+
+登場するコマンドは下記の通りです。
+
+**document.createElement**
+
+新たな要素を生成します。
+例えば、document.createElement("input")とした場合、input要素が生成されます。
+
+**element.id**
+
+ID要素を設定または取得する場合に使用します。
+
+**element.setAttribute**
+
+要素に対して属性を設定する場合に使用します。
+i=1の場合、
+
+```javascript
+var newLabel = document.createElement("label");
+newLabel.setAttribute("for", "check_" +i);
+```
+
+この2行を実行したときに生成される要素は以下になります。
+
+```html
+<label for="check_1"></label>
+```
+
+**document.createTextNode**
+
+要素のテキスト部分を生成します。
+上記の例では、label要素に対するテキストを生成しています。
+
+**element.appendChild(child)**
+
+要素に対して子要素を追加します。
+
+実際に上記のコードを実行した場合、以下のようなHTMLが生成されます。(i=1の場合)
+
+```html
+<input type="checkbox" id="check_1">
+<label for="check_1">チェックボックス1</label>
+```
+
+**element.onclick=function.bind()**
+
+onclickイベントを設定することができます。
+設定の際には少し注意が必要で、関数名.bind()とします。
+関数に引数の設定が必要な場合、第二引数以降に値を指定します。
+
+### innerHtmlによる記載
+
+JavaScriptによる記載方法を紹介しましたが、
+下記のように簡単に書くこともできます。
+
+```javascript
 container.innerHTML += 
                   "<input id='check_"+ i 
                 +"' type='checkbox' onchange='onChecked(this)'/>"
@@ -292,6 +355,7 @@ container.innerHTML +=
                 + "<br/>";
 
 ```
+
 上記のコードが実行されると、以下のようなHTML要素が生成されます。(i=1の場合)
 
 ```html
@@ -300,7 +364,8 @@ container.innerHTML +=
 <br/>
 ```
 
-HTMLの意味合いは割愛しますが、サンプル２との違いは、関数「onChecked」に対して「this」を渡しているということです。
+HTMLの意味合いは割愛しますが、document.createElementで生成したサンプルとの違いは、
+関数「onChecked」に対して「this」を渡しているということです。
 
 JavaScriptでは、「this」がとても大きな意味を持ちます。
 この場合、関数に対して「this」を渡す場合、その時点要素自身を指すため、
@@ -308,6 +373,7 @@ input要素が関数に対して渡されます。
 
 関数「onChecked」では、引数の「val」に対して操作を行なっていますが、
 ここでは「選択されたinput要素（チェックボックス）」をvalとしてコードが実行されることになります。
+
 
 <!--
 <div style="page-break-before:always"></div>
