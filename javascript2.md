@@ -218,7 +218,7 @@ HTML要素自体の作成をすることもできます。
 
         // 5件のチェックボックスを作成
         for (i = 1; i <= 5; i++) {
-            
+
             // JavaScriptのコードを使用して要素(DOM)を生成
             var newInput = document.createElement("input");
             newInput.setAttribute("type", "checkbox");
@@ -575,7 +575,6 @@ $(function() {
 ここでは割愛します。
 
 ### まとめ：jQueryとは
+
 - HTML要素の操作が簡単に実現できる
 - 2019年現在でも多くのWebサイト、Webアプリで使われている
-
-
