@@ -108,7 +108,7 @@ var b = 5.0; // 実数
 
 #### 文字列
 
-文字列の宣言を行う場合には、"(ダブルクォート)または'(シングルクオート)で囲んで宣言します。
+文字列の宣言を行う場合には、"(ダブルクォート)または'(シングルクォート)で囲んで宣言します。
 
 ```javascript
 var a = "abc";
@@ -146,14 +146,38 @@ JavaScriptでは、key-value型の連想配列も簡単に宣言することが�
 var map = {
     "key1": "value1",
     "key2": 54.3,
-    "key3": [1, 3, 5, 7]
+    "key3": [1, 3, 5, 7],
+    "key4": {
+        "child1": "childValue1"
+    }
 }
 ```
 
 配列は[] で囲むのに対し、連想配列は { } で囲んで宣言します。
 
 値は key: valueの形で記載を行います。  
-keyは
+keyは文字列で指定しますが、valueには数値や文字列だけでなく、
+配列や連想配列を代入することができます。
+
+なお、値を取得する場合には、配列も連想配列も[]を使用して値を取り出します。
+
+```javascript
+
+// 配列の宣言
+var list = ["1", "2", "3"];
+// 連想配列の宣言
+var map = {
+    "key1": "value1",
+    "key2": "value2"
+}
+
+// 配列の値取得は格納場所の指定で取得。
+var listElem = list[0];
+
+// 連想配列の値取得はキーとなる文字列を指定して取得
+var mapElem = map["key1"];
+```
+
 ## JavaScriptの基本構文を学ぶ
 
 本章では、JavaScriptの基本的な構文を学習します。
@@ -288,10 +312,39 @@ while(i <= 10) {
 「○回実行する」場合にはforを、
 「●●の間実行する」場合にはwhileを使うようにするとよいでしょう。
 
-### forEach文
+### for in文
+
+配列の中身をループして参照する場合にはfor-in文を使用します。
+
+```javascript
+let array = ["a", "b", "c"];
+
+for (let i in array) {
+    console.log(array[i]);
+}
+```
+
+この際、iに対して配列のインデックスが渡されますので注意が必要です。
+配列内の値を取得するためには、インデックスを用いた指定をする必要があります。
+
+なお、同様に連想配列に対しても同じような使い方ができます。
+
+```javascript
+let map = {
+    "key1": "a",
+    "key2": "b",
+    "key3": "c"
+};
+
+for (let key in map) {
+    console.log(map[key]);
+}
+```
+
+### 配列のforEach関数
 
 配列の値を取得して処理を行う場合があります。
-その場合には、forEach文を使用することで簡単に配列を扱うことができます。
+その場合には、forEachを使用することで、簡単に配列の値を取得することができます。
 
 ```javascript
 let array = ["a", "b", "c"];
@@ -309,7 +362,7 @@ array.forEach(function(elem, i){
 2:c
 ```
 
-他の言語と違い、JavaScriptでは言語仕様ではなく配列に対してforEachが定義されています。  
+JavaScriptでは配列に対してforEachが定義されています。  
 
 ループ内で実行したい処理を関数として定義し、引数として渡します。
 この関数を「コールバック関数」と呼びます。
@@ -328,9 +381,81 @@ function(対象の要素, 要素のインデックス, 配列) {}
 ```javascript
 let array = ["a", "b", "c"];
 
-for(var i = 0; i < array.length; i++) {
-    console.log(i + ":" + array[0]);
+for(var i in array) {
+    console.log(i + ":" + array[i]);
 }
 ```
 
-この書き方でも問題なく動きますので、状況に応じて使い分けをしましょう。
+この書き方でも動きますので、あまり使い道はないかもしれません。
+状況に応じて使い分けをしましょう。
+
+## 配列を使いこなす
+
+配列には、forEachの他にも様々な関数が用意されています。
+本項では、配列の操作を行う関数を紹介します。
+
+### filter
+
+配列の条件に合うものを抽出します。
+
+```javascript
+var array = [1, 3, 6, 3, 2, 7, 10];
+
+var filtered = array.filter(function(elem, i, array) {
+    // 条件を返却
+    return elem > 5;
+});
+
+console.log(filtered); // -> [6, 7, 10]
+```
+
+### find
+
+配列から特定の要素を検索して取得する場合にはfindが使用できます。
+
+filterと似た使い方になりますが、
+filterは配列が返却されるのに対し、findは値が返却されます。
+
+```javascript
+var array = [1, 3, 6, 3, 2, 7, 10];
+
+var found = array.find(function(elem, i, array) {
+    return elem === 3;
+});
+
+console.log(found); // -> 3
+```
+
+### map
+
+既存の配列を処理し、新しい配列を作成する場合にはmapを使用します。
+
+例として、配列内の数値すべてに10%を加算する場合を考えます。
+
+```javascript
+var array = [100, 300, 400, 500];
+
+var newList = array.map(function(elem, i, array) {
+    return elem * 1.1;
+});
+
+console.log(newList); // -> [110, 330, 440, 550];
+```
+
+### reduce / reduceRight
+
+配列を捜査して統計を取得するような場合にはreduceまたはreduceRightを使用します。
+
+例として、配列内の合計値を取得する場合を考えます。
+
+```javascript
+var array = [98, 67, 80, 74, 90];
+
+var total = array.reduce(function(val, elem, i, array) {
+    return val + elem;
+});
+
+console.log(total); // -> 409
+```
+
+reduceは0番目から、reduceRightは最後から処理を繰り返していきます。
