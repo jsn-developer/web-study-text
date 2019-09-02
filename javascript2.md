@@ -12,7 +12,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" 
+    <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sample1 </title>
@@ -61,7 +61,6 @@ document.getElementById("textval")で、IDが"textval"を持つHTML要素を取�
 このtextarea要素は「elem」という名前の「オブジェクト」としてロードされます。  
 以降は、このelemのプロパティや関数にアクセスすることができます。
 
-
 次に、elem.valueでテキストボックスの値を変更します。
 今回は”+="を使用しているため、現在の文字列の末尾に文字を追加しています。
 
@@ -77,14 +76,11 @@ document.getElementById("textval")で、IDが"textval"を持つHTML要素を取�
 onclickを使用することで、ボタン要素がクリックされた際の動作を指定できます。
 今回は、先ほど作成した"replaceText"を呼び出すため、上記のように指定をします。
 
-
 ### まとめ：JavaScriptを宣言するために
 
 - "＜script＞"タグで囲む
 - 関数を宣言
 - 実行するためのイベントをHTML要素に指定
-
-
 
 ## サンプル２　テキストが空の場合ボタンを押下不可能とする
 
@@ -97,7 +93,7 @@ onclickを使用することで、ボタン要素がクリックされた際の�
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" 
+    <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sample2 </title>
@@ -126,9 +122,9 @@ onclickを使用することで、ボタン要素がクリックされた際の�
 
     </script>
     <form>
-        <input id="textval" type="text" 
+        <input id="textval" type="text"
                value="" onkeyup="checkInput(this)" />
-        <input id="submitButton" type="button" 
+        <input id="submitButton" type="button"
                value="送信" onclick="onSubmit()"
                disabled="disabled" />
     </form>
@@ -183,7 +179,7 @@ HTML要素自体の作成をすることもできます。
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" 
+    <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sample3 </title>
@@ -222,7 +218,7 @@ HTML要素自体の作成をすることもできます。
             // JavaScriptのコードを使用して要素(DOM)を生成
             var newInput = document.createElement("input");
             newInput.setAttribute("type", "checkbox");
-            newInput.id = "check_" + i; 
+            newInput.id = "check_" + i;
 
             newInput.onclick = onChecked.bind(null, newInput);
 
@@ -241,8 +237,8 @@ HTML要素自体の作成をすることもできます。
             // -------------------------------
 
             // "innerHTML"に代入することで、チェックボックスを追加
-            // container.innerHTML += 
-            //       "<input id='check_"+ i 
+            // container.innerHTML +=
+            //       "<input id='check_"+ i
             //     +"' type='checkbox' onchange='onChecked(this)'/>"
             //     + "<label for='check_" + i + "'>チェックボックス"
             //     + i + "</label>"
@@ -279,7 +275,7 @@ HTML要素を追加している箇所は以下になります。
 // JavaScriptのコードを使用して要素(DOM)を生成
 var newInput = document.createElement("input");
 newInput.setAttribute("type", "checkbox");
-newInput.id = "check_" + i; 
+newInput.id = "check_" + i;
 
 newInput.onclick = onChecked.bind(null, newInput);
 
@@ -349,8 +345,8 @@ JavaScriptによる記載方法を紹介しましたが、
 下記のように簡単に書くこともできます。
 
 ```javascript
-container.innerHTML += 
-                  "<input id='check_"+ i 
+container.innerHTML +=
+                  "<input id='check_"+ i
                 +"' type='checkbox' onchange='onChecked(this)'/>"
                 + "<label for='check_" + i + "'>チェックボックス"
                 + i + "</label>"
@@ -451,7 +447,6 @@ if (!!value) { }
 
 ただし、数値の"0"もfalseと同じ扱いになるため注意が必要です。
 
-
 ### まとめ：JavaScriptでなんでもできる
 
 - JavaScriptを使えば、HTML要素自体を作って追加することができる。
@@ -472,7 +467,7 @@ jQueryはその使いやすさから、多くのWebデベロッパーに好ま�
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" 
+    <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
@@ -494,7 +489,7 @@ jQueryはその使いやすさから、多くのWebデベロッパーに好ま�
 
         /** 要素名を指定してのスタイル指定 */
         button {
-            border:blueviolet solid 2px; 
+            border:blueviolet solid 2px;
         }
 
         /** 色情報 */
