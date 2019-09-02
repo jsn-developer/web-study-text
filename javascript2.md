@@ -257,6 +257,8 @@ HTML要素自体の作成をすることもできます。
 
 実行すると、以下のように5つのチェックBOXが表示されます。
 
+![](./shots/javascript/js_2_sample3.png)
+
 ### 画面表示時の操作 - onloadの指定
 
 まず、画面が表示されると同時にJavaScriptを実行するようにします。
@@ -294,16 +296,16 @@ container.appendChild(document.createElement("br"));
 
 登場するコマンドは下記の通りです。
 
-**document.createElement**
+#### document.createElement
 
 新たな要素を生成します。
 例えば、document.createElement("input")とした場合、input要素が生成されます。
 
-**element.id**
+#### element.id
 
 ID要素を設定または取得する場合に使用します。
 
-**element.setAttribute**
+#### element.setAttribute
 
 要素に対して属性を設定する場合に使用します。
 i=1の場合、
@@ -319,12 +321,12 @@ newLabel.setAttribute("for", "check_" +i);
 <label for="check_1"></label>
 ```
 
-**document.createTextNode**
+#### document.createTextNode
 
 要素のテキスト部分を生成します。
 上記の例では、label要素に対するテキストを生成しています。
 
-**element.appendChild(child)**
+#### element.appendChild(child)
 
 要素に対して子要素を追加します。
 
@@ -335,7 +337,7 @@ newLabel.setAttribute("for", "check_" +i);
 <label for="check_1">チェックボックス1</label>
 ```
 
-**element.onclick=function.bind()**
+#### element.onclick=function.bind()
 
 onclickイベントを設定することができます。
 設定の際には少し注意が必要で、関数名.bind()とします。
@@ -374,10 +376,10 @@ input要素が関数に対して渡されます。
 関数「onChecked」では、引数の「val」に対して操作を行なっていますが、
 ここでは「選択されたinput要素（チェックボックス）」をvalとしてコードが実行されることになります。
 
-
 <!--
 <div style="page-break-before:always"></div>
 -->
+
 ### Javascriptのnullとundefined
 
 JavaScriptでは、「値がない」ことを表すための表現が複数あります。
@@ -510,7 +512,7 @@ jQueryはその使いやすさから、多くのWebデベロッパーに好ま�
     </style>
 
     <script>
-        
+
         function doRed() {
             $("#container").removeClass("blue");
             $("#container").removeClass("yellow");
@@ -530,10 +532,10 @@ jQueryはその使いやすさから、多くのWebデベロッパーに好ま�
         }
 
         $(function() {
-        	// 各ボタンにonclickのイベントをバインド
-        	$("#redBtn").on("click", doRed);
-           $("#blueBtn").on("click", doBlue);
-           $("#yellowBtn").on("click", doYellow);
+            // 各ボタンにonclickのイベントをバインド
+            $("#redBtn").on("click", doRed);
+            $("#blueBtn").on("click", doBlue);
+            $("#yellowBtn").on("click", doYellow);
         });
     </script>
 </head>
@@ -559,11 +561,26 @@ jQueryの大きな特徴は、セレクタ（HTML要素の抽出）にありま�
 以下の構文だけで要素を抽出できます。
 
 ```javascript
+$("#container")
+```
+
+$(～)で取得したオブジェクトはjQueryオブジェクトとして扱われ、下記のような使い方をすることができます。
+
+```javascript
 $("#container").removeClass("blue");
 
 ```
 
-また、サンプル３で紹介したwindow.onloadも、以下の記載で同じことが実現できます。
+これをjQueryを使用しないで実現しようとすると、下記のような書き方になります。
+
+```javascript
+var container = document.getElementById("container");
+container.classList.remove("blue");
+```
+
+このように、jQueryには
+
+また、サンプル３で紹介したwindow.onloadも、jQueryを使用することで以下のような記載ができます。
 
 ``` javascript
 $(function() {

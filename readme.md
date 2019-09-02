@@ -1,5 +1,5 @@
 ---
-title: Web開発基礎
+title: Webコーディング基礎
 subject: HTML、CSS、JavaScript基礎講座
 author: 株式会社ソルクシーズ
 keywords: [HTML, CSS, JavaScript]

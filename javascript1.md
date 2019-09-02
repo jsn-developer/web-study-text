@@ -14,7 +14,8 @@ JavaScriptは、主にWebブラウザ上で動作するスクリプト言語で�
 
 JavaScriptは、主にブラウザ上で表示されるHTML要素の操作に使用されます。
 
-以下に、サンプルとして幾つかの使用例を紹介します。
+本章では、基本的な構文を学習した後、
+Webページでの使い方を、サンプルと共に解説します。
 
 # JavaScriptの基本構文
 
@@ -48,7 +49,7 @@ console.log(a);
 ```
 
 HTML内にJavaScriptを宣言する場合、
-"<script>〜</script>"内で囲んで記載したコードがJavaScriptとして認識されます。
+「\<script\>〜\</script\>」内で囲んで記載したコードがJavaScriptとして認識されます。
 
 ```javascript
 <script>
@@ -178,6 +179,8 @@ var listElem = list[0];
 var mapElem = map["key1"];
 ```
 
+\newpage
+
 ## JavaScriptの基本構文を学ぶ
 
 本章では、JavaScriptの基本的な構文を学習します。
@@ -199,7 +202,7 @@ if (x === 0) {
     console.log("xは0より大きい。");
 } else {
     // 上記の条件のいずれにも合致しない場合
-    console.log("xば0より小さい。");
+    console.log("xは0より小さい。");
 }
 ```
 
@@ -307,7 +310,7 @@ while(i <= 10) {
 ```
 
 実行してみると、前項のfor文と同じ結果が出力されるかと思います。  
-このように、forとwhileの書き方には互換を持たせることができます。
+このように、forとwhileの書き方には互換性を持たせることができます。
 
 「○回実行する」場合にはforを、
 「●●の間実行する」場合にはwhileを使うようにするとよいでしょう。
