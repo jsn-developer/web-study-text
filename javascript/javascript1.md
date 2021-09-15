@@ -293,7 +293,7 @@ breakを指定しない場合、次のcase文の内容も実行されます。
 回数を指定したループにはforを使用します。
 
 ```javascript
-for (var i = 1: i <= 10: i++) {
+for (var i = 1; i <= 10; i++) {
     console.log(i + "番目です。");
 }
 ```
